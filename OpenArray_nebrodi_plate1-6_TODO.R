@@ -16,7 +16,8 @@ library(stringr)
 library(here)
 
 # Carga, trasnformación y renombrado de réplicas
-data<-here("Datos","ARTICULO","Abies_nebrodi", "openarray_data","abetos_p0-p6_2020100_Results.csv")
+
+data<-here("Abies_nebrodi", "openarray_data","abetos_p0-p6_2020100_Results.csv")
 x<-read.csv(data, header=T, skip = 17)
 x<-unite(x, Genotype,Allele1,Allele2, sep="")
 x<-unite(x, Sample.ID2,SampleID,PlateBarcode, sep="_")
@@ -84,7 +85,7 @@ names(nebrodf$loc.n.all)[nebrodf$loc.n.all==1]
 
 #Asignar las madres
 
-mothers<-read.table(here("Datos","ARTICULO","Abies_nebrodi", "openarray_data","parental_list.txt"),header=T)
+mothers<-read.table(here("Abies_nebrodi", "openarray_data","parental_list.txt"),header=T)
 
 #nombres cudadriplicados
 parentals_names<-c(mothers$parentals,paste0(rep(mothers$parentals,4),".", 1:4))
@@ -101,19 +102,39 @@ nebrodf@pop<-type
 #nebrodf<-missingno(nebrodf, type = "geno", cutoff = 0.50, quiet = FALSE, freq = FALSE)
 # se eliminan 10 muestras más
 
-nebrodf<-missingno(nebrodf, type = "loci", cutoff = 0.25, quiet = FALSE, freq = FALSE)
 
- y<-numeric(21)
+y<-matrix(nrow = 21, ncol=2)
  for (z in 1:21){
    i<-seq(0,1,0.05)[z]
-   y[z]<-nlevels((missingno(nebrodf, type = "loci", cutoff = i, quiet = F, freq = FALSE))@loc.fac)
+   db<-missingno(nebrodf, type = "loci", cutoff = i, quiet = F, freq = FALSE)
+   y[z,1]<-nlevels(db@loc.fac)
+   y[z,2]<-mean(apply(db@tab,1,ty)/(db@loc.fac*2))
  }
  
  cuttoff<-cbind(seq(0,1,0.05),y)
- plot( cuttoff,type="b", ylab="N loci", xlab="cut off call rate")
+ cuttNA<-cbind(seq(0,1,0.05),y[,2])
+ plot( cuttoff,type="b", ylab="N loci", xlab="cut off call rate", ylim=c(0,120))
+ plot( cuttNA,type="b", ylab="NA %", xlab="cut off call rate")
  abline(v=0.25, lty=2)
  
-
+ 
+ y<-matrix(nrow = 21, ncol=2)
+ for (z in 1:21){
+   i<-seq(0,1,0.05)[z]
+   db<-missingno(nebrodf, type = "geno", cutoff = i, quiet = F, freq = FALSE)
+   y[z,1]<-dim(db@tab)[1]
+   y[z,2]<-mean(apply(db@tab,1,ty)/(dim(db@tab)[2]))
+ }
+ 
+ cuttoff<-cbind(seq(0,1,0.05),y[,1])
+ cuttNA<-cbind(seq(0,1,0.05),y[,2])
+ plot( cuttoff,type="b", ylab="N individuals", xlab="cut off call rate")
+ plot(cuttNA, type="b", col=2)
+ abline(v=0.25, lty=2)
+ 
+ 
+ nebrodf<-missingno(nebrodf, type = "loci", cutoff = 0.25, quiet = FALSE, freq = FALSE)
+ nebrodf<-missingno(nebrodf, type = "geno", cutoff = 0.30, quiet = FALSE, freq = FALSE)
 
 #separar los padres e hijos
 nebrodf2<-seppop(nebrodf)

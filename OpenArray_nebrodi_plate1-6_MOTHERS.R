@@ -15,7 +15,7 @@ library(here)
 #   4.2 Diversidad
 
 
-data<-here("Datos","ARTICULO","Abies_nebrodi", "openarray_data","abetos_p0-p6_2020100_Results.csv")
+data<-here("Abies_nebrodi", "openarray_data","abetos_p0-p6_2020100_Results.csv")
 x<-read.csv(data, header=T, skip = 17)
 x<-unite(x, Genotype,Allele1,Allele2, sep="")
 
@@ -71,7 +71,7 @@ nebrodf<-df2genind(new_GENOTYPE_CALLS,  ncode = 1,
 
 #Asignar las madres
 
-mothers<-read.table(here("Datos","ARTICULO","Abies_nebrodi", "openarray_data","parental_list.txt"),header=T)
+mothers<-read.table(here("Abies_nebrodi", "openarray_data","parental_list.txt"),header=T)
 
 #nombres cudadriplicados
 parentals_names<-c(mothers$parentals,paste0(rep(mothers$parentals,4),".", 1:4))
@@ -122,7 +122,7 @@ apply(DF4,1,tx)
            
 DF4<-DF4[sort(rownames(DF4)),]
 
-m<-read.table(here("Datos","ARTICULO","Abies_nebrodi", "openarray_data","codigosmadre.csv"), sep=" ", header=T)
+m<-read.table(here("Abies_nebrodi", "openarray_data","codigosmadre.csv"), sep=" ", header=T)
             
 rownames(DF4)<-m$mother_code
 
@@ -134,8 +134,14 @@ cleaned_mothers2<-informloci(cleaned_mothers, cutoff = 0, MAF = 0.01, quiet = FA
 
 loci<-genind2loci(cleaned_mothers2)
 summary(loci)# check a00255117_6348
+#tabla de frecuencia
+af<-rraf(cleaned_mothers2,res = "data.frame")
+af$frequency<-round(af$frequency,3)
+
+write.table(af[,-3], "/home/fbalao/solomon/motherAF.txt")
 write.loci(loci, loci.sep = "\t", quote = FALSE, col.names = T, file="moGeno_nebro.txt")
 
+makefreq(as.genpop(cleaned_mothers2))
 
 
 x<-missingno(cleaned_mothers, type = "loci", cutoff = 0.25, quiet = FALSE, freq = FALSE)
