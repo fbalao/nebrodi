@@ -270,6 +270,7 @@ col3 <- colorRampPalette(c("red", "white", "blue"))
 
 # Figure S2
 layout(matrix(c(1,2,2),nrow=3))
+
 compoplot(neb_dapc,border=T,
           col=c(colfunk[3], colfunk[2],colfunk[1]),show.lab=T, legend=F,
           subset=v2)
