@@ -205,7 +205,7 @@ plot(ind_nebroDiv2$PHt~ind_nebroDiv2$ibr)
 
 kneb<-find.clusters(padresDB) # Usando n.pca = 30,n.clust = 3)
 
-neb_dapc<-dapc(padresDB,pop = kneb$grp, n.pca = 13, n.da = 2)
+neb_dapc<-dapc(padresDB,pop = kneb$grp, n.pca = 12, n.da = 2)
 # se usan 13 PC tras mirar 
 # neb_dapc<-dapc(padresDB,pop = kneb$grp, n.pca = 13, n.da = 2)
 # temp <- optim.a.score(neb_dapc, n.sim=1000, n=30)
@@ -218,7 +218,6 @@ v2<-indorder
 
 colfunk<-funky(6)
 
-layout(matrix(c(1,2),nrow=2))
 compoplot(neb_dapc,border=T,
           col=c(colfunk[1], colfunk[3],colfunk[2]),show.lab=T, legend=F,
           subset=v2)
@@ -266,6 +265,14 @@ convert_to_distance_matrix <- function(df) {
 }
 
 dfr<-convert_to_distance_matrix(rela[c(2,3,9)])
+
+col3 <- colorRampPalette(c("red", "white", "blue")) 
+
+# Figure S2
+layout(matrix(c(1,2,2),nrow=3))
+compoplot(neb_dapc,border=T,
+          col=c(colfunk[3], colfunk[2],colfunk[1]),show.lab=T, legend=F,
+          subset=v2)
 
 c<-corrplot(dfr,  order = "hclust", hclust.method = "ward.D2",
          addrect = 3,
