@@ -1,0 +1,21 @@
+Output from NeEstimator v2.1
+Starting time: Tue Jul 25 12:01:15 2023
+Input File: "snps.gen"
+
+Number of Loci = 100
+
+
+LINKAGE DISEQUILIBRIUM METHOD, Mating Model: Random
+
+Lowest allele frequencies used:     0.0500    0.0200    0.0100
+Up to 17 rightmost characters are shown for Population name.
+-------------------------------------------------------------
+                   	         	      	             	            	         	          	         	    Parametric CI		    Jackknife CI
+Population [#:Name]	Samp Size	PCrit.	Weighted Mean	Ind. Alleles	    r^2  	  Exp(r^2)	     Ne  	       Low	      High	       Low	      High	  (Eff.df)
+1:V1               	    120  	0.0500	     102.3   	      4836  	 0.035681	  0.009598	     10.2	       9.4	      10.9	       9.0	      11.4	      1907
+                   	         	0.0200	     101.6   	      4937  	 0.035861	  0.009666	     10.1	       9.4	      10.9	       9.0	      11.3	      1893
+                   	         	0.0100	     101.5   	      4939  	 0.035856	  0.009669	     10.1	       9.4	      10.9	       9.0	      11.4	      1893
+
+Ending time: Tue Jul 25 12:01:16 2023
+-------------------------------------
+
