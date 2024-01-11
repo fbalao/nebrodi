@@ -255,7 +255,26 @@ kruskal.test(p$fis~p$subfacet)
 TukeyHSD(aov(p$ho~p$subfacet))
 TukeyHSD(aov(p$fis~p$subfacet))
 
-##### PONER LETRAS AL GRAFICO
+
+library(rcompanion)
+
+epsilonSquared(x = p$ho,
+               g = p$subfacet, ci=T, histogram=T, 
+               type="perc", reportIncomplete=T)
+
+
+epsilonSquared(x = p$fis,
+               g = p$subfacet, ci=T, histogram=T, 
+               type="perc", reportIncomplete=T)
+
+epsilonSquared(x = p$pi,
+               g = p$subfacet, ci=T, histogram=T, 
+               type="perc", reportIncomplete=T)
+library(rstatix)
+
+p %>% kruskal_effsize(ho ~ subfacet)
+
+=##### PONER LETRAS AL GRAFICO
 
 # Diversity violin plot ----
 

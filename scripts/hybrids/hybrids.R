@@ -166,13 +166,17 @@ bgcol<-col1[pop(poolabies2)]
 #bgcol[c(39,59,65)]<-c(col2[1],col2[1], col2[2])
 
 #Figure 3
-plot(x,y, bg=bgcol, pch=21, cex=1.7, ylim=c(-28,28), col=circ,
+plot(x,-y, bg=bgcol, pch=21, cex=1.7, ylim=c(-28,28), col=circ,
      xlab="PC1 (28.6%)", ylab="PC2 (13.4%)", cex.axis=1.3, cex.lab=1.4)
 
-legend(4,-17,legend = c(expression(italic("A. alba")), 
+legend(10,-15,legend = c(expression(italic("A. alba")),
                       expression(italic("A. cephalonica")),
                       expression(paste(italic("A. nebrodensis")," adults")),
-                      expression(paste(italic("A. nebrodensis"), " seedlings"))), 
+                      expression(paste(italic("A. nebrodensis"), " seedlings"))),
+       pch=21, cex=1.2, col="grey35", pt.bg=col1, pt.cex=1.5,
+       box.lwd = 0, border = "white", bg="transparent")
+
+legend(11,-15,legend = c("Silver fir", "Greek fir", "Sicilian fir adults", "Sicilian fir seedlings"), 
        pch=21, cex=1.2, col="grey35", pt.bg=col1, pt.cex=1.5,
        box.lwd = 0, border = "white", bg="transparent")
 

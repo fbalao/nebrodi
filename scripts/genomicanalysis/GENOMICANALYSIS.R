@@ -36,13 +36,14 @@ datarad$sp<-as.factor(c("nebrodensis","cephalonica","cephalonica","cephalonica",
 
 
 dataradtest<-rbind(datarad, datarad[1,], datarad[1,])
-levels(dataradtest$sp)<-c("A. alba", "A. cephalonica", "A. nebrodensis")
+#levels(dataradtest$sp)<-c("A. alba", "A. cephalonica", "A. nebrodensis")
+levels(dataradtest$sp)<-c("Silver fir", "Greek fir", "Sicilian fir")
 
 
 legend<- ggplot(dataradtest, aes(x=sp, y=Pi, fill=sp)) +
   geom_violin(trim=FALSE, show.legend = T) +
   scale_fill_brewer(palette="Spectral") +
-theme(legend.title=element_blank(), legend.text = element_text(size=26,face = "italic")) 
+theme(legend.title=element_blank(), legend.text = element_text(size=14,face = "italic")) 
 
 
 legendp <- g_legend(legend + theme(legend.position='bottom'))
@@ -110,12 +111,34 @@ grid.arrange(dpi+theme(legend.position='hidden'), dhet+theme(legend.position='hi
 
 ### analysis
 
-# pi
+# kruskal-wallis test
 
 kruskal.test(datarad$Pi, datarad$sp)
 kruskal.test(datarad$Private, datarad$sp)
 kruskal.test(datarad$Exp_Het, datarad$sp)
 kruskal.test(datarad$Fis, datarad$sp)
+
+# kruskal-wallis effect size
+
+library(rstatix)
+
+datarad %>% kruskal_effsize(Pi ~ sp)
+datarad %>% kruskal_effsize(Private ~ sp)
+datarad %>% kruskal_effsize(Exp_Het ~ sp)
+datarad %>% kruskal_effsize(Fis ~ sp)
+
+library(rcompanion)
+
+epsilonSquared(x = datarad$Pi,
+               g = datarad$sp, ci=T, histogram=T, 
+               type="perc", reportIncomplete=T)
+epsilonSquared(x = datarad$Private,
+               g = datarad$sp, ci=T, histogram=T, 
+               type="perc", reportIncomplete=T, B=100000)
+epsilonSquared(x = datarad$Exp_Het,
+               g = datarad$sp)
+epsilonSquared(x = datarad$Fis,
+               g = datarad$sp)
 
 # Genomic differentiation ----
 fst_genomewide<-read.table("Abies_nebrodi/genomic_analysis/Aneb_populations_all/populations.phistats_nebrodensis-alba1.tsv", header=T)
