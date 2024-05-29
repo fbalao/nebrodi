@@ -1,5 +1,83 @@
-# Scripts for analysis LIFE4FIR
-SNP array analysis on *Abies nebrodensis*
-  1. Data transformation
-  2. Diversity analyses
-  3. Parentage analyses
+### R Scripts for analyses from manuscript *Genomic-guided conservation actions to restore the most endangered conifer in the Mediterranean Basin*
+Authors: José Carlos del Valle, Montserrat Arista, Carmen Benítez-Benítez, Pedro Luis Ortiz, Francisco J. Jiménez-López, Anass Terrab, Francisco Balao  
+
+University of Seville
+
+Funded by LIFE4FIR [http://www.life4fir.com](html:http://www.life4fir.com)
+
+See *master.R* file for a summary of analyses
+
+[Contact Us](mailto:fbalao@us.es)
+
+  
+#### Project tree
+ * [data](./data)
+     * [agf](./data/agf)
+        * [outbreed_nursery.txt](./data/agf/outbreed_nursery.txt)
+         * [12crosses_nohybs.txt](./data/agf/12crosses_nohybs.txt)
+    * [rawdata](./data/rawdata)
+        * [abetos_p0-p6_2020100_Results_vivaio.csv](./data/rawdata/abetos_p0-p6_2020100_Results_vivaio.csv)
+        * [ABETOS_P15P16P17P19P20P21P22P23_20210413_Results.csv](./data/rawdata/ABETOS_P15P16P17P19P20P21P22P23_20210413_Results.csv)
+         * [abetos_p7p8p9p10p11p12P13P14_20210413_Results.csv](./data/rawdata/abetos_p7p8p9p10p11p12P13P14_20210413_Results.csv)
+     * [formats](./data/formats)
+        * [poolabies2.str](./data/formats/poolabies2.str)
+        * [nebrodialbacephalonica95loc.str](./data/formats/nebrodialbacephalonica95loc.str)
+        * [seedlingshybrids.str](./data/formats/seedlingshybrids.str)
+     * [hybrids](./data/hybrids)
+        * [seedlingshybrids_all.str](./data/hybrids/seedlingshybrids_all.str)
+        * [seedlings_alba_hybrids.str](./data/hybrids/seedlings_alba_hybrids.str)
+        * [seedlings_ceph_hybrids.str](./data/hybrids/seedlings_ceph_hybrids.str)
+        * [seedlings_alba_hybrids2.str](./data/hybrids/seedlings_alba_hybrids2.str)
+     * [diversity](./data/diversity)
+        * [RADseq_Abies_populations.txt](./data/diversity/RADseq_Abies_populations.txt)
+        * [RADseq_Abies_populations.xlsx](./data/diversity/RADseq_Abies_populations.xlsx)
+    * [openarray_design](./data/openarray_design)
+         * [hybrids_filter](./data/openarray_design/hybrids_filter)
+               * [nebrodi_hybrids_snps_final.vcf](./data/openarray_design/hybrids_filter/nebrodi_hybrids_snps_final.vcf)
+               * [nebrodi_hybrids_20snps_finaldata.txt](./data/openarray_design/hybrids_filter/nebrodi_hybrids_20snps_finaldata.txt)
+         * [nebrodi_filter](./data/openarray_design/nebrodi_filter)
+             * [clean_intergenicSNPs_nebrodi.vcf](./data/openarray_design/nebrodi_filter/clean_intergenicSNPs_nebrodi.vcf)
+   * [scripts](./scripts)
+       * [snparraydesign](./scripts/snparraydesign)
+           * [nebrodi_SNPpanel_selection.R](./scripts/snparraydesign/nebrodi_SNPpanel_selection.R)
+    * [RADseq_comparative](./scripts/RADseq_comparative)
+        * [abies_comparativeRADseq.R](./scripts/RADseq_comparative/abies_comparativeRADseq.R)
+    * [hybrids](./scripts/hybrids)
+        * [hybrids.R](./scripts/hybrids/hybrids.R)
+        * [plot_h2.R](./scripts/hybrids/plot_h2.R)
+        * [hybridindex.R](./scripts/hybrids/hybridindex.R)
+        * [hybridsPCA.R](./scripts/hybrids/hybridsPCA.R)
+    * [AGF](./scripts/AGF)
+        * [hybridize3.R](./scripts/AGF/hybridize3.R)
+        * [AGF.R](./scripts/AGF/AGF.R)
+     * [Diversity](./scripts/Diversity)
+        * [genind2structrure.R](./scripts/Diversity/genind2structrure.R)
+        * [DiversityAnalysis_Aneb.R](./scripts/Diversity/DiversityAnalysis_Aneb.R)
+    * [Genotyping](./scripts/Genotyping)
+        * [Cleaning_genotypes_mothers.R](./scripts/Genotyping/Cleaning_genotypes_mothers.R)
+        * [Analisis_OpenArray_nebrodi_adults_seedlings.R](./scripts/Genotyping/Analisis_OpenArray_nebrodi_adults_seedlings.R)
+        * [Analisis_OpenArray_nebrodi_nursery_seedlings.R](./scripts/Genotyping/Analisis_OpenArray_nebrodi_nursery_seedlings.R)
+        * [Aneb_adults_seedlings_colony.R](./scripts/Genotyping/Aneb_adults_seedlings_colony.R)
+ * [results](./results)
+     * [NeEstimator](./results/NeEstimator)
+        * [NeEstimator_agp](./results/NeEstimator/NeEstimator_agp)
+        * [NeEstimator_nextG](./results/NeEstimator/NeEstimator_nextG)
+        * [NeEstimator_seedlings](./results/NeEstimator/NeEstimator_seedlings)
+        * [NeEstimator_adults](./results/NeEstimator/NeEstimator_adults)
+    * [Figurasdefinitivas](./results/Figurasdefinitivas)
+        * [Figure1.tiff](./results/Figurasdefinitivas/Figure1.tiff)
+        * [Figure1.pdf](./results/Figurasdefinitivas/Figure1.pdf)
+        * [Figure4.tiff](./results/Figurasdefinitivas/Figure4.tiff)
+        * [Figure4.pdf](./results/Figurasdefinitivas/Figure4.pdf)
+        * [Figure3.pdf](./results/Figurasdefinitivas/Figure3.pdf)
+        * [FigureS1.tiff](./results/Figurasdefinitivas/FigureS1.tiff)
+        * [FigureS1.pdf](./results/Figurasdefinitivas/FigureS1.pdf)
+        * [FigureS2.tiff](./results/Figurasdefinitivas/FigureS2.tiff)
+        * [FigureS2.pdf](./results/Figurasdefinitivas/FigureS2.pdf)
+        * [FigureS2b.png](./results/Figurasdefinitivas/FigureS2b.png)
+        * [Figure3.tiff](./results/Figurasdefinitivas/Figure3.tiff)
+ * [nebrodi.Rproj](./nebrodi.Rproj)
+ * [master.R](./master.R)
+ * [Rpackage_versions.txt](./Rpackage_versions.txt)
+ * [README.md](./README.md)
+

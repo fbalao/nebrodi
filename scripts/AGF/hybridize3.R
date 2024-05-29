@@ -1,3 +1,6 @@
+# This is a modification of the adegenet's function hybridize. It allow us just 
+# one individual by parental population
+
 hybridize3<-function (x1, x2, original, n, pop = "hybrid", res.type = c("genind", "df", 
                                                   "STRUCTURE"), file = NULL, quiet = FALSE, sep = "/", hyb.label = "h") 
 {

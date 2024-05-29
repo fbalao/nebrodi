@@ -1,0 +1,747 @@
+##fileformat=VCFv4.3
+##fileDate=20200109
+##source=PLINKv2.00
+##INFO=<ID=AD,Number=R,Type=Integer,Description="Total Depth for Each Allele">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##INFO=<ID=NS,Number=1,Type=Integer,Description="Number of Samples With Data">
+##INFO=<ID=loc_strand,Number=1,Type=Character,Description="Genomic strand the corresponding Stacks locus aligns on">
+##contig=<ID=aalba5_s00000316,length=6424>
+##contig=<ID=aalba5_s00001151,length=105454>
+##contig=<ID=aalba5_s00001752,length=48113>
+##contig=<ID=aalba5_s00001795,length=101026>
+##contig=<ID=aalba5_s00001909,length=38304>
+##contig=<ID=aalba5_s00002143,length=96876>
+##contig=<ID=aalba5_s00002503,length=30838>
+##contig=<ID=aalba5_s00002526,length=5169>
+##contig=<ID=aalba5_s00002911,length=27400>
+##contig=<ID=aalba5_s00002929,length=87673>
+##contig=<ID=aalba5_s00002963,length=19884>
+##contig=<ID=aalba5_s00003159,length=77631>
+##contig=<ID=aalba5_s00003721,length=3996>
+##contig=<ID=aalba5_s00003814,length=72403>
+##contig=<ID=aalba5_s00003972,length=35408>
+##contig=<ID=aalba5_s00004550,length=91262>
+##contig=<ID=aalba5_s00005060,length=98721>
+##contig=<ID=aalba5_s00005386,length=97437>
+##contig=<ID=aalba5_s00006084,length=65529>
+##contig=<ID=aalba5_s00006928,length=82949>
+##contig=<ID=aalba5_s00006984,length=7360>
+##contig=<ID=aalba5_s00007470,length=69917>
+##contig=<ID=aalba5_s00007680,length=38993>
+##contig=<ID=aalba5_s00008234,length=29990>
+##contig=<ID=aalba5_s00008388,length=38343>
+##contig=<ID=aalba5_s00008671,length=47361>
+##contig=<ID=aalba5_s00009493,length=29796>
+##contig=<ID=aalba5_s00010573,length=51867>
+##contig=<ID=aalba5_s00010578,length=19563>
+##contig=<ID=aalba5_s00010841,length=77661>
+##contig=<ID=aalba5_s00011075,length=35610>
+##contig=<ID=aalba5_s00012011,length=48145>
+##contig=<ID=aalba5_s00012579,length=17526>
+##contig=<ID=aalba5_s00012797,length=73710>
+##contig=<ID=aalba5_s00012847,length=1327>
+##contig=<ID=aalba5_s00013094,length=8681>
+##contig=<ID=aalba5_s00013869,length=58562>
+##contig=<ID=aalba5_s00013963,length=3923>
+##contig=<ID=aalba5_s00013966,length=29070>
+##contig=<ID=aalba5_s00013993,length=51518>
+##contig=<ID=aalba5_s00014588,length=43078>
+##contig=<ID=aalba5_s00015203,length=22076>
+##contig=<ID=aalba5_s00015376,length=53088>
+##contig=<ID=aalba5_s00015769,length=26412>
+##contig=<ID=aalba5_s00015810,length=22305>
+##contig=<ID=aalba5_s00017888,length=58245>
+##contig=<ID=aalba5_s00018153,length=26148>
+##contig=<ID=aalba5_s00019897,length=48206>
+##contig=<ID=aalba5_s00020346,length=48251>
+##contig=<ID=aalba5_s00020473,length=65615>
+##contig=<ID=aalba5_s00020784,length=46330>
+##contig=<ID=aalba5_s00020884,length=3849>
+##contig=<ID=aalba5_s00021794,length=4493>
+##contig=<ID=aalba5_s00021935,length=45849>
+##contig=<ID=aalba5_s00022340,length=43445>
+##contig=<ID=aalba5_s00024966,length=56044>
+##contig=<ID=aalba5_s00025087,length=13505>
+##contig=<ID=aalba5_s00025854,length=47495>
+##contig=<ID=aalba5_s00026610,length=3250>
+##contig=<ID=aalba5_s00026909,length=23155>
+##contig=<ID=aalba5_s00027069,length=30621>
+##contig=<ID=aalba5_s00027856,length=21198>
+##contig=<ID=aalba5_s00027935,length=20846>
+##contig=<ID=aalba5_s00028303,length=4672>
+##contig=<ID=aalba5_s00029538,length=33035>
+##contig=<ID=aalba5_s00029764,length=12101>
+##contig=<ID=aalba5_s00030235,length=46981>
+##contig=<ID=aalba5_s00030941,length=25256>
+##contig=<ID=aalba5_s00031071,length=37827>
+##contig=<ID=aalba5_s00031272,length=48712>
+##contig=<ID=aalba5_s00032518,length=7684>
+##contig=<ID=aalba5_s00032769,length=49144>
+##contig=<ID=aalba5_s00032840,length=12167>
+##contig=<ID=aalba5_s00033001,length=18616>
+##contig=<ID=aalba5_s00033161,length=11325>
+##contig=<ID=aalba5_s00034043,length=28039>
+##contig=<ID=aalba5_s00034378,length=23501>
+##contig=<ID=aalba5_s00034521,length=22625>
+##contig=<ID=aalba5_s00034998,length=11123>
+##contig=<ID=aalba5_s00035404,length=36677>
+##contig=<ID=aalba5_s00035596,length=36480>
+##contig=<ID=aalba5_s00035683,length=7390>
+##contig=<ID=aalba5_s00035982,length=45423>
+##contig=<ID=aalba5_s00036297,length=49598>
+##contig=<ID=aalba5_s00036767,length=17151>
+##contig=<ID=aalba5_s00038351,length=32652>
+##contig=<ID=aalba5_s00038547,length=47810>
+##contig=<ID=aalba5_s00039735,length=51382>
+##contig=<ID=aalba5_s00040148,length=6673>
+##contig=<ID=aalba5_s00040184,length=43040>
+##contig=<ID=aalba5_s00040483,length=25862>
+##contig=<ID=aalba5_s00040488,length=52166>
+##contig=<ID=aalba5_s00041846,length=38441>
+##contig=<ID=aalba5_s00042301,length=17246>
+##contig=<ID=aalba5_s00043428,length=2025>
+##contig=<ID=aalba5_s00043719,length=30256>
+##contig=<ID=aalba5_s00043914,length=13943>
+##contig=<ID=aalba5_s00043935,length=27333>
+##contig=<ID=aalba5_s00043948,length=7373>
+##contig=<ID=aalba5_s00044361,length=46526>
+##contig=<ID=aalba5_s00045002,length=28764>
+##contig=<ID=aalba5_s00045562,length=26629>
+##contig=<ID=aalba5_s00046328,length=43636>
+##contig=<ID=aalba5_s00046535,length=32032>
+##contig=<ID=aalba5_s00046875,length=6105>
+##contig=<ID=aalba5_s00047126,length=48995>
+##contig=<ID=aalba5_s00047132,length=234>
+##contig=<ID=aalba5_s00047210,length=26090>
+##contig=<ID=aalba5_s00047687,length=1100>
+##contig=<ID=aalba5_s00047697,length=42949>
+##contig=<ID=aalba5_s00048185,length=36478>
+##contig=<ID=aalba5_s00050981,length=2984>
+##contig=<ID=aalba5_s00052058,length=6442>
+##contig=<ID=aalba5_s00052177,length=14509>
+##contig=<ID=aalba5_s00052516,length=22359>
+##contig=<ID=aalba5_s00052572,length=28778>
+##contig=<ID=aalba5_s00053610,length=11731>
+##contig=<ID=aalba5_s00054117,length=20413>
+##contig=<ID=aalba5_s00054625,length=22053>
+##contig=<ID=aalba5_s00054718,length=7033>
+##contig=<ID=aalba5_s00055382,length=18138>
+##contig=<ID=aalba5_s00055638,length=26954>
+##contig=<ID=aalba5_s00055837,length=37300>
+##contig=<ID=aalba5_s00055894,length=28192>
+##contig=<ID=aalba5_s00057151,length=12708>
+##contig=<ID=aalba5_s00057695,length=8677>
+##contig=<ID=aalba5_s00057975,length=26519>
+##contig=<ID=aalba5_s00058733,length=6808>
+##contig=<ID=aalba5_s00059021,length=27107>
+##contig=<ID=aalba5_s00059304,length=15195>
+##contig=<ID=aalba5_s00059700,length=18438>
+##contig=<ID=aalba5_s00059884,length=27260>
+##contig=<ID=aalba5_s00060152,length=19007>
+##contig=<ID=aalba5_s00060937,length=26029>
+##contig=<ID=aalba5_s00061984,length=35230>
+##contig=<ID=aalba5_s00062181,length=35973>
+##contig=<ID=aalba5_s00062620,length=38325>
+##contig=<ID=aalba5_s00062632,length=18728>
+##contig=<ID=aalba5_s00063196,length=36479>
+##contig=<ID=aalba5_s00063222,length=16892>
+##contig=<ID=aalba5_s00063382,length=13234>
+##contig=<ID=aalba5_s00063801,length=5299>
+##contig=<ID=aalba5_s00063829,length=22822>
+##contig=<ID=aalba5_s00064014,length=30607>
+##contig=<ID=aalba5_s00064274,length=41430>
+##contig=<ID=aalba5_s00064811,length=27145>
+##contig=<ID=aalba5_s00065787,length=10534>
+##contig=<ID=aalba5_s00066075,length=39131>
+##contig=<ID=aalba5_s00067552,length=21567>
+##contig=<ID=aalba5_s00069158,length=2572>
+##contig=<ID=aalba5_s00070014,length=24487>
+##contig=<ID=aalba5_s00070553,length=33240>
+##contig=<ID=aalba5_s00071018,length=6127>
+##contig=<ID=aalba5_s00071049,length=6236>
+##contig=<ID=aalba5_s00071084,length=1412>
+##contig=<ID=aalba5_s00071252,length=34243>
+##contig=<ID=aalba5_s00072513,length=25339>
+##contig=<ID=aalba5_s00074130,length=5401>
+##contig=<ID=aalba5_s00075250,length=14560>
+##contig=<ID=aalba5_s00075376,length=31859>
+##contig=<ID=aalba5_s00075815,length=17603>
+##contig=<ID=aalba5_s00076805,length=19510>
+##contig=<ID=aalba5_s00077185,length=7121>
+##contig=<ID=aalba5_s00077313,length=6271>
+##contig=<ID=aalba5_s00077522,length=23411>
+##contig=<ID=aalba5_s00077815,length=11917>
+##contig=<ID=aalba5_s00078567,length=20067>
+##contig=<ID=aalba5_s00078694,length=27429>
+##contig=<ID=aalba5_s00079927,length=9752>
+##contig=<ID=aalba5_s00080339,length=30652>
+##contig=<ID=aalba5_s00082052,length=27980>
+##contig=<ID=aalba5_s00082277,length=17094>
+##contig=<ID=aalba5_s00083024,length=18306>
+##contig=<ID=aalba5_s00084894,length=24570>
+##contig=<ID=aalba5_s00084919,length=34246>
+##contig=<ID=aalba5_s00085063,length=32559>
+##contig=<ID=aalba5_s00085150,length=5146>
+##contig=<ID=aalba5_s00085904,length=7599>
+##contig=<ID=aalba5_s00086284,length=12803>
+##contig=<ID=aalba5_s00086491,length=14095>
+##contig=<ID=aalba5_s00087283,length=35346>
+##contig=<ID=aalba5_s00088056,length=21636>
+##contig=<ID=aalba5_s00088292,length=22604>
+##contig=<ID=aalba5_s00088882,length=1095>
+##contig=<ID=aalba5_s00088992,length=25007>
+##contig=<ID=aalba5_s00089888,length=13364>
+##contig=<ID=aalba5_s00090029,length=30479>
+##contig=<ID=aalba5_s00090069,length=25395>
+##contig=<ID=aalba5_s00091483,length=29289>
+##contig=<ID=aalba5_s00091542,length=15936>
+##contig=<ID=aalba5_s00091916,length=2618>
+##contig=<ID=aalba5_s00092812,length=32835>
+##contig=<ID=aalba5_s00096674,length=6091>
+##contig=<ID=aalba5_s00098313,length=14486>
+##contig=<ID=aalba5_s00099260,length=2179>
+##contig=<ID=aalba5_s00099929,length=29024>
+##contig=<ID=aalba5_s00100520,length=25346>
+##contig=<ID=aalba5_s00100766,length=4330>
+##contig=<ID=aalba5_s00102743,length=18554>
+##contig=<ID=aalba5_s00102759,length=14883>
+##contig=<ID=aalba5_s00103154,length=28098>
+##contig=<ID=aalba5_s00103201,length=11470>
+##contig=<ID=aalba5_s00103613,length=27344>
+##contig=<ID=aalba5_s00103709,length=11345>
+##contig=<ID=aalba5_s00103924,length=8235>
+##contig=<ID=aalba5_s00105167,length=2899>
+##contig=<ID=aalba5_s00106781,length=11020>
+##contig=<ID=aalba5_s00106878,length=5808>
+##contig=<ID=aalba5_s00107043,length=22690>
+##contig=<ID=aalba5_s00107555,length=18664>
+##contig=<ID=aalba5_s00107851,length=19254>
+##contig=<ID=aalba5_s00108002,length=12323>
+##contig=<ID=aalba5_s00108590,length=5634>
+##contig=<ID=aalba5_s00109814,length=5075>
+##contig=<ID=aalba5_s00111900,length=23201>
+##contig=<ID=aalba5_s00113639,length=27055>
+##contig=<ID=aalba5_s00113936,length=10925>
+##contig=<ID=aalba5_s00114664,length=11410>
+##contig=<ID=aalba5_s00115123,length=15998>
+##contig=<ID=aalba5_s00115797,length=2445>
+##contig=<ID=aalba5_s00117989,length=27775>
+##contig=<ID=aalba5_s00119440,length=5279>
+##contig=<ID=aalba5_s00120258,length=9299>
+##contig=<ID=aalba5_s00120785,length=4831>
+##contig=<ID=aalba5_s00120809,length=12850>
+##contig=<ID=aalba5_s00121045,length=25949>
+##contig=<ID=aalba5_s00122713,length=11173>
+##contig=<ID=aalba5_s00123112,length=2715>
+##contig=<ID=aalba5_s00123141,length=27123>
+##contig=<ID=aalba5_s00125017,length=255>
+##contig=<ID=aalba5_s00127626,length=2896>
+##contig=<ID=aalba5_s00127717,length=13068>
+##contig=<ID=aalba5_s00129004,length=10852>
+##contig=<ID=aalba5_s00130138,length=22929>
+##contig=<ID=aalba5_s00130795,length=22947>
+##contig=<ID=aalba5_s00130905,length=20847>
+##contig=<ID=aalba5_s00132319,length=20095>
+##contig=<ID=aalba5_s00132345,length=23502>
+##contig=<ID=aalba5_s00132564,length=13045>
+##contig=<ID=aalba5_s00133194,length=13506>
+##contig=<ID=aalba5_s00134210,length=18540>
+##contig=<ID=aalba5_s00135098,length=1569>
+##contig=<ID=aalba5_s00135415,length=22815>
+##contig=<ID=aalba5_s00135607,length=10754>
+##contig=<ID=aalba5_s00137475,length=8153>
+##contig=<ID=aalba5_s00138095,length=14889>
+##contig=<ID=aalba5_s00138713,length=11886>
+##contig=<ID=aalba5_s00138895,length=25516>
+##contig=<ID=aalba5_s00140872,length=10930>
+##contig=<ID=aalba5_s00143725,length=17934>
+##contig=<ID=aalba5_s00144704,length=2374>
+##contig=<ID=aalba5_s00145744,length=10070>
+##contig=<ID=aalba5_s00146340,length=23910>
+##contig=<ID=aalba5_s00147517,length=19957>
+##contig=<ID=aalba5_s00148232,length=4782>
+##contig=<ID=aalba5_s00148379,length=22150>
+##contig=<ID=aalba5_s00148814,length=16940>
+##contig=<ID=aalba5_s00148893,length=9946>
+##contig=<ID=aalba5_s00150416,length=662>
+##contig=<ID=aalba5_s00150928,length=1101>
+##contig=<ID=aalba5_s00151818,length=5689>
+##contig=<ID=aalba5_s00152507,length=21252>
+##contig=<ID=aalba5_s00155697,length=15408>
+##contig=<ID=aalba5_s00157379,length=9300>
+##contig=<ID=aalba5_s00157499,length=3420>
+##contig=<ID=aalba5_s00157711,length=20964>
+##contig=<ID=aalba5_s00158167,length=12968>
+##contig=<ID=aalba5_s00158543,length=5450>
+##contig=<ID=aalba5_s00159297,length=10783>
+##contig=<ID=aalba5_s00160684,length=3090>
+##contig=<ID=aalba5_s00161543,length=9086>
+##contig=<ID=aalba5_s00161986,length=20139>
+##contig=<ID=aalba5_s00162069,length=14627>
+##contig=<ID=aalba5_s00163740,length=18615>
+##contig=<ID=aalba5_s00164609,length=17707>
+##contig=<ID=aalba5_s00164694,length=3406>
+##contig=<ID=aalba5_s00165705,length=18786>
+##contig=<ID=aalba5_s00166515,length=14462>
+##contig=<ID=aalba5_s00167337,length=4853>
+##contig=<ID=aalba5_s00167375,length=4210>
+##contig=<ID=aalba5_s00168116,length=12158>
+##contig=<ID=aalba5_s00168312,length=1334>
+##contig=<ID=aalba5_s00169523,length=3110>
+##contig=<ID=aalba5_s00170129,length=8239>
+##contig=<ID=aalba5_s00171174,length=16894>
+##contig=<ID=aalba5_s00174498,length=10071>
+##contig=<ID=aalba5_s00175463,length=12567>
+##contig=<ID=aalba5_s00176060,length=3745>
+##contig=<ID=aalba5_s00176894,length=13432>
+##contig=<ID=aalba5_s00178604,length=3172>
+##contig=<ID=aalba5_s00179214,length=8145>
+##contig=<ID=aalba5_s00179618,length=8911>
+##contig=<ID=aalba5_s00179891,length=6483>
+##contig=<ID=aalba5_s00180258,length=5821>
+##contig=<ID=aalba5_s00181026,length=3326>
+##contig=<ID=aalba5_s00181112,length=6438>
+##contig=<ID=aalba5_s00181436,length=13306>
+##contig=<ID=aalba5_s00181693,length=6112>
+##contig=<ID=aalba5_s00184149,length=9127>
+##contig=<ID=aalba5_s00184196,length=7378>
+##contig=<ID=aalba5_s00185167,length=2029>
+##contig=<ID=aalba5_s00185264,length=13310>
+##contig=<ID=aalba5_s00185416,length=13613>
+##contig=<ID=aalba5_s00186040,length=12077>
+##contig=<ID=aalba5_s00186444,length=956>
+##contig=<ID=aalba5_s00186489,length=15503>
+##contig=<ID=aalba5_s00189742,length=14049>
+##contig=<ID=aalba5_s00190567,length=6005>
+##contig=<ID=aalba5_s00190614,length=3137>
+##contig=<ID=aalba5_s00191698,length=16866>
+##contig=<ID=aalba5_s00192540,length=9958>
+##contig=<ID=aalba5_s00193391,length=9210>
+##contig=<ID=aalba5_s00194420,length=4106>
+##contig=<ID=aalba5_s00195003,length=8983>
+##contig=<ID=aalba5_s00197223,length=11985>
+##contig=<ID=aalba5_s00198233,length=11564>
+##contig=<ID=aalba5_s00199343,length=9991>
+##contig=<ID=aalba5_s00200449,length=2677>
+##contig=<ID=aalba5_s00202602,length=10279>
+##contig=<ID=aalba5_s00204112,length=4888>
+##contig=<ID=aalba5_s00205601,length=7711>
+##contig=<ID=aalba5_s00206300,length=4278>
+##contig=<ID=aalba5_s00207460,length=2876>
+##contig=<ID=aalba5_s00213037,length=8502>
+##contig=<ID=aalba5_s00213968,length=1527>
+##contig=<ID=aalba5_s00214421,length=5938>
+##contig=<ID=aalba5_s00217555,length=4091>
+##contig=<ID=aalba5_s00218262,length=7002>
+##contig=<ID=aalba5_s00219269,length=1953>
+##contig=<ID=aalba5_s00219286,length=9055>
+##contig=<ID=aalba5_s00220765,length=7197>
+##contig=<ID=aalba5_s00222624,length=10698>
+##contig=<ID=aalba5_s00223820,length=15099>
+##contig=<ID=aalba5_s00224062,length=8496>
+##contig=<ID=aalba5_s00225509,length=2831>
+##contig=<ID=aalba5_s00225613,length=391>
+##contig=<ID=aalba5_s00226167,length=5651>
+##contig=<ID=aalba5_s00226505,length=4309>
+##contig=<ID=aalba5_s00226837,length=4740>
+##contig=<ID=aalba5_s00228784,length=5605>
+##contig=<ID=aalba5_s00231735,length=8634>
+##contig=<ID=aalba5_s00233259,length=7360>
+##contig=<ID=aalba5_s00234565,length=9808>
+##contig=<ID=aalba5_s00236944,length=1924>
+##contig=<ID=aalba5_s00237735,length=7460>
+##contig=<ID=aalba5_s00237870,length=1993>
+##contig=<ID=aalba5_s00237927,length=6495>
+##contig=<ID=aalba5_s00238232,length=12079>
+##contig=<ID=aalba5_s00239386,length=4761>
+##contig=<ID=aalba5_s00240565,length=10181>
+##contig=<ID=aalba5_s00240581,length=8834>
+##contig=<ID=aalba5_s00240999,length=12826>
+##contig=<ID=aalba5_s00242410,length=11162>
+##contig=<ID=aalba5_s00244155,length=5800>
+##contig=<ID=aalba5_s00244315,length=1949>
+##contig=<ID=aalba5_s00244890,length=7549>
+##contig=<ID=aalba5_s00244925,length=14172>
+##contig=<ID=aalba5_s00245037,length=10821>
+##contig=<ID=aalba5_s00247174,length=6221>
+##contig=<ID=aalba5_s00247411,length=7477>
+##contig=<ID=aalba5_s00248048,length=6636>
+##contig=<ID=aalba5_s00251232,length=7683>
+##contig=<ID=aalba5_s00251520,length=9784>
+##contig=<ID=aalba5_s00252107,length=7586>
+##contig=<ID=aalba5_s00252630,length=8773>
+##contig=<ID=aalba5_s00252992,length=5738>
+##contig=<ID=aalba5_s00255117,length=6349>
+##contig=<ID=aalba5_s00255357,length=7330>
+##contig=<ID=aalba5_s00255493,length=13340>
+##contig=<ID=aalba5_s00256451,length=1631>
+##contig=<ID=aalba5_s00256540,length=11965>
+##contig=<ID=aalba5_s00258014,length=8735>
+##contig=<ID=aalba5_s00258634,length=12307>
+##contig=<ID=aalba5_s00258678,length=9847>
+##contig=<ID=aalba5_s00259310,length=5007>
+##contig=<ID=aalba5_s00261079,length=7450>
+##contig=<ID=aalba5_s00262590,length=11715>
+##contig=<ID=aalba5_s00265848,length=11778>
+##contig=<ID=aalba5_s00267197,length=6299>
+##contig=<ID=aalba5_s00267916,length=7922>
+##contig=<ID=aalba5_s00269705,length=3576>
+##contig=<ID=aalba5_s00276605,length=6626>
+##contig=<ID=aalba5_s00278544,length=1299>
+##contig=<ID=aalba5_s00280288,length=9329>
+##contig=<ID=aalba5_s00280463,length=7168>
+##contig=<ID=aalba5_s00281156,length=8467>
+##contig=<ID=aalba5_s00281724,length=8100>
+##contig=<ID=aalba5_s00282568,length=2062>
+##contig=<ID=aalba5_s00284289,length=7963>
+##contig=<ID=aalba5_s00286385,length=11553>
+##contig=<ID=aalba5_s00288593,length=6776>
+##contig=<ID=aalba5_s00289560,length=1737>
+##contig=<ID=aalba5_s00292324,length=2921>
+##contig=<ID=aalba5_s00304272,length=442>
+##contig=<ID=aalba5_s00306925,length=733>
+##contig=<ID=aalba5_s00310757,length=8770>
+##contig=<ID=aalba5_s00312458,length=3216>
+##contig=<ID=aalba5_s00312829,length=8534>
+##contig=<ID=aalba5_s00314534,length=8684>
+##contig=<ID=aalba5_s00316071,length=8663>
+##contig=<ID=aalba5_s00316448,length=7004>
+##contig=<ID=aalba5_s00325926,length=6684>
+##contig=<ID=aalba5_s00326131,length=8086>
+##contig=<ID=aalba5_s00326816,length=8575>
+##contig=<ID=aalba5_s00328710,length=9619>
+##contig=<ID=aalba5_s00330277,length=7069>
+##contig=<ID=aalba5_s00331730,length=1558>
+##contig=<ID=aalba5_s00331937,length=3827>
+##contig=<ID=aalba5_s00333929,length=3592>
+##contig=<ID=aalba5_s00334050,length=7916>
+##contig=<ID=aalba5_s00337043,length=7129>
+##contig=<ID=aalba5_s00337369,length=8083>
+##contig=<ID=aalba5_s00345723,length=5598>
+##contig=<ID=aalba5_s00347988,length=6618>
+##contig=<ID=aalba5_s00348314,length=8315>
+##contig=<ID=aalba5_s00349205,length=3601>
+##contig=<ID=aalba5_s00353910,length=3686>
+##contig=<ID=aalba5_s00355397,length=9113>
+##contig=<ID=aalba5_s00360980,length=7251>
+##contig=<ID=aalba5_s00364632,length=1659>
+##contig=<ID=aalba5_s00369460,length=433>
+##contig=<ID=aalba5_s00387991,length=6540>
+##contig=<ID=aalba5_s00391386,length=5168>
+##contig=<ID=aalba5_s00393098,length=3170>
+##contig=<ID=aalba5_s00398739,length=5650>
+##contig=<ID=aalba5_s00404587,length=2932>
+##contig=<ID=aalba5_s00407187,length=5862>
+##contig=<ID=aalba5_s00417691,length=2455>
+##contig=<ID=aalba5_s00422950,length=4390>
+##contig=<ID=aalba5_s00429257,length=1761>
+##contig=<ID=aalba5_s00430374,length=4829>
+##contig=<ID=aalba5_s00447641,length=3017>
+##contig=<ID=aalba5_s00448318,length=3035>
+##contig=<ID=aalba5_s00466527,length=1678>
+##contig=<ID=aalba5_s00468277,length=2769>
+##contig=<ID=aalba5_s00475712,length=4350>
+##contig=<ID=aalba5_s00477652,length=3223>
+##contig=<ID=aalba5_s00481314,length=4332>
+##contig=<ID=aalba5_s00488643,length=3970>
+##contig=<ID=aalba5_s00488944,length=2570>
+##contig=<ID=aalba5_s00499720,length=1853>
+##contig=<ID=aalba5_s00500633,length=2664>
+##contig=<ID=aalba5_s00508912,length=1271>
+##contig=<ID=aalba5_s00516683,length=2697>
+##contig=<ID=aalba5_s00536039,length=773>
+##contig=<ID=aalba5_s00542646,length=3431>
+##contig=<ID=aalba5_s00571106,length=1824>
+##contig=<ID=aalba5_s00596278,length=1490>
+##contig=<ID=aalba5_s00632486,length=2849>
+##contig=<ID=aalba5_s00646402,length=1663>
+##contig=<ID=aalba5_s00654606,length=1402>
+##contig=<ID=aalba5_s00658835,length=673>
+##contig=<ID=aalba5_s00705824,length=1831>
+##contig=<ID=aalba5_s00731556,length=911>
+##contig=<ID=aalba5_s00805183,length=1952>
+##contig=<ID=aalba5_s00814795,length=1451>
+##contig=<ID=aalba5_s00822742,length=894>
+##contig=<ID=aalba5_s00864584,length=1710>
+##contig=<ID=aalba5_s02118495,length=280>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##SnpEffVersion="4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  Abal.1_1 nebrodi_snps_final.vcf "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##SnpSiftVersion="SnpSift 4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
+##SnpSiftCmd="SnpSift Filter 'ANN[*].EFFECT has 'intergenic_region'' -f nebrodi_snps_final_ann.vcf"
+##FILTER=<ID=SnpSift,Description="SnpSift 4.3t (build 2017-11-24 10:18), by Pablo Cingolani, Expression used: ANN[*].EFFECT has 'intergenic_region'">
+##SnpSiftCmd="SnpSift Filter '(ANN[*].EFFECT has 'downstream_gene_variant') | (ANN[*].EFFECT has 'upstream_gene_variant')' -n -f nebrodi_intergenic.vcf"
+##FILTER=<ID=SnpSift,Description="SnpSift 4.3t (build 2017-11-24 10:18), by Pablo Cingolani, Expression used: (ANN[*].EFFECT has 'downstream_gene_variant') | (ANN[*].EFFECT has 'upstream_gene_variant')">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	sorted.uniq_i7_RAD1_neb_25_14_1_sbfI	sorted.uniq_i12_RAD1_neb_25_14_2_sbfI	sorted.uniq_i18_RAD2_neb_25_14_3_sbfI	sorted.uniq_i16_RAD3_neb_25_14_4_sbfI	sorted.uniq_i31_RAD4_neb_25_14_5_sbfI
+aalba5_s00001151	105453	7056:88:+	A	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00001795	101025	10333:8:+	A	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|AALBA5B431460-CHR_END|AALBA5B431460-CHR_END|intergenic_region|AALBA5B431460-CHR_END|||n.101025A>T||||||	GT	0/1	1/1	0/1	0/0	0/1
+aalba5_s00002143	96875	11931:46:-	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00002503	30837	13485:22:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00002526	5168	13588:52:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B925325|CHR_START-AALBA5B925325|intergenic_region|CHR_START-AALBA5B925325|||n.5168G>A||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00002911	27399	15225:46:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B757885|CHR_START-AALBA5B757885|intergenic_region|CHR_START-AALBA5B757885|||n.27399T>C||||||	GT	0/1	1/1	0/0	0/1	0/1
+aalba5_s00002929	87672	15303:71:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00002963	19883	15447:17:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B984621|CHR_START-AALBA5B984621|intergenic_region|CHR_START-AALBA5B984621|||n.19883C>T||||||	GT	0/1	1/1	0/1	0/1	0/0
+aalba5_s00003721	3995	18548:7:+	C	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	0/1	1/1
+aalba5_s00003814	72402	18913:37:-	T	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|CHR_START-AALBA5B720412|CHR_START-AALBA5B720412|intergenic_region|CHR_START-AALBA5B720412|||n.72402T>G||||||	GT	0/0	1/1	0/1	0/1	0/0
+aalba5_s00003972	35407	19521:55:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B138600|CHR_START-AALBA5B138600|intergenic_region|CHR_START-AALBA5B138600|||n.35407C>T||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00004550	91261	21764:70:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	1/1
+aalba5_s00005060	98720	23725:41:+	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|AALBA5B898972-CHR_END|AALBA5B898972-CHR_END|intergenic_region|AALBA5B898972-CHR_END|||n.98720G>T||||||	GT	0/1	0/0	0/0	1/1	0/1
+aalba5_s00006084	65528	27439:56:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	0/1	1/1
+aalba5_s00006984	7359	30701:93:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	1/1	0/1
+aalba5_s00007470	69916	32384:87:+	C	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|AALBA5B161687-CHR_END|AALBA5B161687-CHR_END|intergenic_region|AALBA5B161687-CHR_END|||n.69916C>G||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00007680	38992	33108:84:-	G	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/1
+aalba5_s00008234	29989	35016:20:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	1/1	0/1	0/0
+aalba5_s00008388	38342	35499:30:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/1
+aalba5_s00008671	47360	36462:46:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|AALBA5B207201-AALBA5B582863|AALBA5B207201-AALBA5B582863|intergenic_region|AALBA5B207201-AALBA5B582863|||n.47360G>A||||||	GT	0/1	0/0	0/0	1/1	0/0
+aalba5_s00010573	51866	42455:87:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/0
+aalba5_s00010578	19562	42469:75:-	T	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00010841	77660	43237:7:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	1/1	0/1
+aalba5_s00011075	35609	43884:26:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B1068367|CHR_START-AALBA5B1068367|intergenic_region|CHR_START-AALBA5B1068367|||n.35609G>A||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00012579	17525	48368:82:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00012847	1326	49218:40:-	A	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00013094	8680	49962:43:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B677106|CHR_START-AALBA5B677106|intergenic_region|CHR_START-AALBA5B677106|||n.8680C>T||||||	GT	1/1	0/0	0/0	1/1	0/1
+aalba5_s00013963	3922	52454:59:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	0/0	0/1
+aalba5_s00013966	29069	52466:49:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|AALBA5B274779-AALBA5B642698|AALBA5B274779-AALBA5B642698|intergenic_region|AALBA5B274779-AALBA5B642698|||n.29069G>A||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00013993	51517	52544:44:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	1/1	0/0	0/0
+aalba5_s00015203	22075	55952:78:+	C	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00015769	26411	57484:38:-	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00015810	22304	57592:13:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00018153	26147	63674:75:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B701603|CHR_START-AALBA5B701603|intergenic_region|CHR_START-AALBA5B701603|||n.26147G>A||||||	GT	0/1	0/0	0/1	0/0	1/1
+aalba5_s00019897	48205	68164:29:+	A	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	1/1
+aalba5_s00020346	48250	69371:74:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B1014353|CHR_START-AALBA5B1014353|intergenic_region|CHR_START-AALBA5B1014353|||n.48250T>C||||||	GT	0/0	0/1	1/1	0/1	0/0
+aalba5_s00020473	65614	69713:30:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00020884	3848	70747:67:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B340855|CHR_START-AALBA5B340855|intergenic_region|CHR_START-AALBA5B340855|||n.3848G>A||||||	GT	0/0	0/1	0/1	1/1	0/0
+aalba5_s00021794	4492	72930:74:-	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B712036|CHR_START-AALBA5B712036|intergenic_region|CHR_START-AALBA5B712036|||n.4492T>C||||||	GT	0/0	1/1	0/1	0/0	0/1
+aalba5_s00021935	45848	73290:42:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|AALBA5B283262-CHR_END|AALBA5B283262-CHR_END|intergenic_region|AALBA5B283262-CHR_END|||n.45848A>G||||||	GT	0/0	0/1	0/0	0/1	1/1
+aalba5_s00022340	43444	74278:76:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	0/1	1/1
+aalba5_s00024966	56043	80441:42:-	T	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|AALBA5B209943-CHR_END|AALBA5B209943-CHR_END|intergenic_region|AALBA5B209943-CHR_END|||n.56043T>A||||||	GT	0/1	0/1	0/1	1/1	0/0
+aalba5_s00025087	13504	80722:53:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	0/1
+aalba5_s00026909	23154	84791:64:-	C	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00027069	30620	85153:90:+	G	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00027935	20845	87027:49:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|AALBA5B716448-CHR_END|AALBA5B716448-CHR_END|intergenic_region|AALBA5B716448-CHR_END|||n.20845G>A||||||	GT	1/1	0/1	0/0	0/0	0/1
+aalba5_s00028303	4671	87837:22:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B854789|CHR_START-AALBA5B854789|intergenic_region|CHR_START-AALBA5B854789|||n.4671G>A||||||	GT	0/0	0/1	0/0	0/1	1/1
+aalba5_s00029764	12100	91068:27:-	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B407135|CHR_START-AALBA5B407135|intergenic_region|CHR_START-AALBA5B407135|||n.12100A>T||||||	GT	1/1	0/1	0/0	0/1	0/0
+aalba5_s00030235	46980	92051:59:-	T	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|AALBA5B405716-AALBA5B995066|AALBA5B405716-AALBA5B995066|intergenic_region|AALBA5B405716-AALBA5B995066|||n.46980T>G||||||	GT	0/0	1/1	0/0	0/1	0/1
+aalba5_s00031071	37826	93964:62:+	G	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|AALBA5B645132-CHR_END|AALBA5B645132-CHR_END|intergenic_region|AALBA5B645132-CHR_END|||n.37826G>C||||||	GT	0/1	1/1	0/0	0/0	0/0
+aalba5_s00031272	48711	94395:18:+	C	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/1
+aalba5_s00032518	7683	97032:10:+	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B428254|CHR_START-AALBA5B428254|intergenic_region|CHR_START-AALBA5B428254|||n.7683C>T||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00033001	18615	98024:35:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|AALBA5B972127-AALBA5B660348|AALBA5B972127-AALBA5B660348|intergenic_region|AALBA5B972127-AALBA5B660348|||n.18615C>T||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00033161	11324	98308:58:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B703109|CHR_START-AALBA5B703109|intergenic_region|CHR_START-AALBA5B703109|||n.11324G>A||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00034043	28038	100193:20:+	T	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|AALBA5B673840-CHR_END|AALBA5B673840-CHR_END|intergenic_region|AALBA5B673840-CHR_END|||n.28038T>A||||||	GT	0/1	1/1	0/1	0/0	0/0
+aalba5_s00034521	22624	101193:15:+	A	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|AALBA5B513278-CHR_END|AALBA5B513278-CHR_END|intergenic_region|AALBA5B513278-CHR_END|||n.22624A>C||||||	GT	0/0	0/1	0/0	1/1	1/1
+aalba5_s00034998	11122	102196:47:+	A	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B538280|CHR_START-AALBA5B538280|intergenic_region|CHR_START-AALBA5B538280|||n.11122A>C||||||	GT	0/1	0/0	1/1	0/0	0/1
+aalba5_s00035404	36676	102940:82:+	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00035683	7389	103524:57:+	C	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/0	1/1
+aalba5_s00036297	49597	104749:73:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/0	0/1	0/1
+aalba5_s00036767	17150	105697:56:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B770037|CHR_START-AALBA5B770037|intergenic_region|CHR_START-AALBA5B770037|||n.17150G>A||||||	GT	0/0	0/1	0/0	1/1	0/0
+aalba5_s00038351	32651	108798:17:-	T	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00038547	47809	109155:38:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/1
+aalba5_s00039735	51381	111405:36:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00040184	43039	112255:60:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	0/1
+aalba5_s00040483	25861	112846:46:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|AALBA5B970449-CHR_END|AALBA5B970449-CHR_END|intergenic_region|AALBA5B970449-CHR_END|||n.25861C>T||||||	GT	1/1	0/0	1/1	0/1	0/0
+aalba5_s00040488	52165	112854:11:+	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/0	0/1
+aalba5_s00041846	38440	115436:31:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/1
+aalba5_s00043428	2024	118336:76:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|CHR_START-AALBA5B285263|CHR_START-AALBA5B285263|intergenic_region|CHR_START-AALBA5B285263|||n.2024A>G||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00043719	30255	118825:23:-	T	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	1/1	0/1	0/0
+aalba5_s00045562	26628	122175:11:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	1/1	0/0	0/0
+aalba5_s00046328	43635	123580:74:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00046535	32031	123970:72:+	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00047126	48994	125017:42:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/1
+aalba5_s00047132	233	125025:16:-	C	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00047210	26089	125184:12:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/1
+aalba5_s00048185	36477	126905:23:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B107347|CHR_START-AALBA5B107347|intergenic_region|CHR_START-AALBA5B107347|||n.36477C>T||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00052177	14508	133487:37:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/1
+aalba5_s00052516	22358	134071:7:+	C	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00053610	11730	135915:82:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00054117	20412	136741:23:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	1/1	0/1	0/0
+aalba5_s00054625	22052	137605:76:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B208550|CHR_START-AALBA5B208550|intergenic_region|CHR_START-AALBA5B208550|||n.22052C>T||||||	GT	0/0	0/1	0/0	0/1	1/1
+aalba5_s00054718	7032	137798:46:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00055382	18137	138837:31:+	A	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	0/0	0/1
+aalba5_s00055837	37299	139556:9:+	A	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	1/1	0/0	0/1
+aalba5_s00055894	28191	139676:17:-	G	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00057151	12707	141614:66:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00057975	26518	142903:70:-	G	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/0
+aalba5_s00059021	27106	144482:82:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	1/1
+aalba5_s00059304	15194	144878:61:+	G	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|AALBA5B1122408-CHR_END|AALBA5B1122408-CHR_END|intergenic_region|AALBA5B1122408-CHR_END|||n.15194G>T||||||	GT	0/1	0/1	1/1	0/1	0/0
+aalba5_s00059700	18437	145500:19:+	A	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	0/0	1/1
+aalba5_s00059884	27259	145806:58:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B541453|CHR_START-AALBA5B541453|intergenic_region|CHR_START-AALBA5B541453|||n.27259T>C||||||	GT	0/1	0/0	0/0	0/1	1/1
+aalba5_s00060152	19006	146200:93:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	1/1
+aalba5_s00060937	26028	147355:13:-	T	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	1/1	0/0	1/1
+aalba5_s00062181	35972	149228:38:-	G	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/1
+aalba5_s00063196	36478	150830:90:-	T	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|AALBA5B611492-CHR_END|AALBA5B611492-CHR_END|intergenic_region|AALBA5B611492-CHR_END|||n.36478T>G||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00063382	13233	151071:21:-	C	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/1	0/0
+aalba5_s00063801	5298	151652:40:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/1	0/0
+aalba5_s00063829	22821	151698:12:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B1087553|CHR_START-AALBA5B1087553|intergenic_region|CHR_START-AALBA5B1087553|||n.22821C>T||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00064274	41429	152360:51:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	0/1	1/1
+aalba5_s00069158	2571	159328:67:-	G	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	1/1	0/0	0/0
+aalba5_s00070014	24486	160476:60:+	T	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	1/1	0/0	0/0
+aalba5_s00071018	6126	161853:28:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	1/1	0/0
+aalba5_s00071049	6235	161903:47:-	A	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|CHR_START-AALBA5B179183|CHR_START-AALBA5B179183|intergenic_region|CHR_START-AALBA5B179183|||n.6235A>G||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00071252	34242	162186:23:-	A	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00074130	5400	166084:91:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	0/1	1/1
+aalba5_s00075376	31858	167834:50:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|AALBA5B937090-CHR_END|AALBA5B937090-CHR_END|intergenic_region|AALBA5B937090-CHR_END|||n.31858C>T||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00076805	19509	169674:42:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00077185	7120	170165:24:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B387907|CHR_START-AALBA5B387907|intergenic_region|CHR_START-AALBA5B387907|||n.7120G>A||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00077313	6270	170314:36:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/1	1/1	0/1
+aalba5_s00077522	23410	170604:41:-	T	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|AALBA5B665288-CHR_END|AALBA5B665288-CHR_END|intergenic_region|AALBA5B665288-CHR_END|||n.23410T>A||||||	GT	0/1	1/1	0/1	0/0	0/0
+aalba5_s00077815	11916	170997:85:-	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B1146799|CHR_START-AALBA5B1146799|intergenic_region|CHR_START-AALBA5B1146799|||n.11916G>T||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00078567	20066	172008:76:+	G	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	1/1
+aalba5_s00078694	27428	172179:40:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/1	0/1
+aalba5_s00080339	30651	174381:91:-	A	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00082052	27979	176609:95:-	T	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/0	0/0
+aalba5_s00082277	17093	176888:85:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	0/1	1/1
+aalba5_s00083024	18305	177905:87:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	1/1
+aalba5_s00084919	34245	180134:90:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|AALBA5B560415-CHR_END|AALBA5B560415-CHR_END|intergenic_region|AALBA5B560415-CHR_END|||n.34245G>A||||||	GT	0/0	0/0	0/1	1/1	0/0
+aalba5_s00085904	7598	181281:38:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/1
+aalba5_s00087283	35345	182906:74:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|AALBA5B933198-CHR_END|AALBA5B933198-CHR_END|intergenic_region|AALBA5B933198-CHR_END|||n.35345T>C||||||	GT	1/1	0/0	0/0	0/0	0/1
+aalba5_s00088056	21635	183867:56:+	T	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00088992	25006	184969:50:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00090029	30478	186230:41:+	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/0	1/1
+aalba5_s00090069	25394	186282:73:-	A	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00091542	15935	187987:39:-	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/1	0/1
+aalba5_s00092812	32834	189355:33:+	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00096674	6090	193772:43:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/0
+aalba5_s00098313	14485	195669:37:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00099260	2178	196690:19:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B1138775|CHR_START-AALBA5B1138775|intergenic_region|CHR_START-AALBA5B1138775|||n.2178C>T||||||	GT	0/0	0/0	0/0	0/1	1/1
+aalba5_s00100766	4329	198215:87:+	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/0
+aalba5_s00102759	14882	200519:65:+	C	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/1	0/1
+aalba5_s00103154	28097	200908:68:+	A	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	1/1	0/1	0/0	0/0
+aalba5_s00103201	11469	200949:74:-	C	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	0/1	0/1
+aalba5_s00103613	27343	201367:84:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00103709	11344	201473:50:+	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	0/1	1/1
+aalba5_s00103924	8234	201692:71:-	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B254442|CHR_START-AALBA5B254442|intergenic_region|CHR_START-AALBA5B254442|||n.8234T>C||||||	GT	1/1	0/0	0/1	0/1	0/0
+aalba5_s00106878	5807	204857:14:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	0/1	0/0
+aalba5_s00108002	12322	206043:7:+	G	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/1
+aalba5_s00108590	5633	206697:79:-	C	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	1/1	0/0
+aalba5_s00109814	5074	207941:62:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/1	0/1
+aalba5_s00115123	15997	213357:52:+	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/1	1/1	0/0
+aalba5_s00115797	2444	214060:65:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00117989	27774	216201:51:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/1	0/1
+aalba5_s00119440	5278	217642:68:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/0	0/0	0/0
+aalba5_s00120809	12849	218943:40:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00122713	11172	220805:49:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	1/1	0/0	0/0
+aalba5_s00123112	2714	221165:17:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B140163|CHR_START-AALBA5B140163|intergenic_region|CHR_START-AALBA5B140163|||n.2714T>C||||||	GT	0/1	1/1	0/1	0/0	0/0
+aalba5_s00125017	254	223026:15:+	A	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/1	0/0
+aalba5_s00127717	13067	225444:50:+	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00130138	22928	227543:10:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	1/1	0/1	0/0
+aalba5_s00130905	20846	228279:78:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/1	1/1	0/0
+aalba5_s00132319	20094	229543:58:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/0	0/0
+aalba5_s00132345	23501	229568:36:+	G	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/0	0/0
+aalba5_s00133194	13505	230308:28:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/1	0/0
+aalba5_s00135098	1568	231953:22:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00137475	8152	234025:73:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	1/1	0/1	0/0	0/0
+aalba5_s00138895	25515	235234:27:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/1	0/0
+aalba5_s00140872	10929	236952:91:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	0/1	1/1
+aalba5_s00143725	17933	239359:61:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/1
+aalba5_s00144704	2373	240054:95:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|CHR_START-AALBA5B464192|CHR_START-AALBA5B464192|intergenic_region|CHR_START-AALBA5B464192|||n.2373G>A||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00146340	23909	241367:87:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|AALBA5B244268-CHR_END|AALBA5B244268-CHR_END|intergenic_region|AALBA5B244268-CHR_END|||n.23909T>C||||||	GT	0/1	0/0	1/1	0/1	0/1
+aalba5_s00148232	4781	242812:56:-	G	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00148379	22149	242938:67:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|AALBA5B415506-CHR_END|AALBA5B415506-CHR_END|intergenic_region|AALBA5B415506-CHR_END|||n.22149T>C||||||	GT	0/0	0/0	0/1	0/0	1/1
+aalba5_s00148814	16939	243284:46:+	C	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	1/1
+aalba5_s00150416	661	244573:78:+	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/1
+aalba5_s00150928	1100	244978:43:+	C	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/1	0/0
+aalba5_s00152507	21251	246231:91:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00155697	15407	248669:47:-	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/0
+aalba5_s00157379	9299	249893:94:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00157499	3419	249976:94:-	T	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	0/0	0/1
+aalba5_s00157711	20963	250147:38:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00158543	5449	250726:35:+	C	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/0
+aalba5_s00159297	10782	251274:31:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/0
+aalba5_s00160684	3089	252233:65:-	C	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/0
+aalba5_s00161543	9085	252812:32:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	1/1	0/0	0/1
+aalba5_s00161986	20138	253116:56:-	T	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	1/1	0/0	0/0
+aalba5_s00162069	14626	253153:69:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	0/1	1/1
+aalba5_s00164694	3405	255076:57:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	0/0	1/1	0/1
+aalba5_s00167337	4852	256910:42:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00168312	1333	257686:45:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00174498	10070	261850:37:+	G	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	0/0	1/1
+aalba5_s00175463	12566	262502:75:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	1/1	0/0	0/1
+aalba5_s00176060	3744	262908:31:+	T	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	0/0	1/1
+aalba5_s00176894	13431	263417:86:-	T	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/1	0/0
+aalba5_s00178604	3171	264533:95:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	0/0	1/1	0/0
+aalba5_s00179214	8144	264897:18:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/0	0/1	0/0
+aalba5_s00179618	8910	265166:18:+	A	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/1	0/0
+aalba5_s00179891	6482	265342:17:+	A	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	1/1	0/1	0/0	0/0
+aalba5_s00180258	5820	265575:15:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/1	0/0
+aalba5_s00181026	3325	266028:20:+	C	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/0
+aalba5_s00181436	13305	266305:10:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00184149	9126	268019:91:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	1/1	0/0	0/1	0/0
+aalba5_s00184196	7377	268048:18:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/0	0/1
+aalba5_s00185167	2028	268720:54:+	C	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/0
+aalba5_s00185416	13612	268904:59:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/0
+aalba5_s00186444	955	269523:19:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/0	0/0	0/1
+aalba5_s00189742	14048	271486:87:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	1/1	0/0	0/1
+aalba5_s00191698	16865	272641:81:+	T	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	0/1	0/0
+aalba5_s00193391	9209	273612:33:-	C	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	0/1	1/1
+aalba5_s00195003	8982	274572:78:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	0/0	1/1
+aalba5_s00198233	11563	276452:64:+	C	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/1
+aalba5_s00199343	9990	277089:67:-	G	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	1/1	0/0	0/0
+aalba5_s00200449	2676	277753:63:-	T	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	1/1	0/1	0/0
+aalba5_s00204112	4887	279754:73:-	C	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00205601	7710	280510:49:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/1	0/1
+aalba5_s00206300	4277	280914:12:+	T	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	0/1	1/1
+aalba5_s00213968	1526	284878:67:-	A	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00214421	5937	285165:94:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00218262	7001	287185:90:-	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/1	0/0
+aalba5_s00219269	1952	287724:21:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/1	0/1
+aalba5_s00219286	9054	287744:26:-	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/1
+aalba5_s00220765	7196	288447:71:-	G	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|AALBA5B872544-CHR_END|AALBA5B872544-CHR_END|intergenic_region|AALBA5B872544-CHR_END|||n.7196G>T||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00222624	10697	289363:27:+	A	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	1/1	0/1
+aalba5_s00223820	15098	289960:43:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	1/1	0/1
+aalba5_s00225509	2830	290779:90:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/1
+aalba5_s00225613	390	290831:38:+	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00226167	5650	291095:12:-	C	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00226505	4308	291267:18:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/1	0/1
+aalba5_s00231735	8633	293797:90:-	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B346332|CHR_START-AALBA5B346332|intergenic_region|CHR_START-AALBA5B346332|||n.8633G>T||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00236944	1923	296185:45:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	0/1	0/1
+aalba5_s00237870	1992	296626:50:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	0/0	1/1
+aalba5_s00238232	12078	296796:63:-	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	0/0	0/1
+aalba5_s00239386	4760	297316:11:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	1/1	0/1	0/0
+aalba5_s00240565	10180	297822:50:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|AALBA5B1024435-CHR_END|AALBA5B1024435-CHR_END|intergenic_region|AALBA5B1024435-CHR_END|||n.10180C>T||||||	GT	0/0	0/0	0/1	0/1	1/1
+aalba5_s00240581	8833	297831:10:-	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/1	0/0
+aalba5_s00240999	12825	298039:74:+	A	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	1/1	0/1	0/1
+aalba5_s00242410	11161	298622:70:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	0/0
+aalba5_s00244315	1948	299447:10:+	C	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/1
+aalba5_s00247174	6220	300661:62:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00248048	6635	301053:67:+	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	0/0	0/1
+aalba5_s00251520	9783	302574:94:-	C	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/0	0/0
+aalba5_s00252630	8772	302993:28:-	A	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/0
+aalba5_s00252992	5737	303145:16:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/0
+aalba5_s00255117	6348	303935:42:+	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/0
+aalba5_s00256451	1630	304461:38:-	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|CHR_START-AALBA5B749386|CHR_START-AALBA5B749386|intergenic_region|CHR_START-AALBA5B749386|||n.1630G>T||||||	GT	0/0	0/1	0/0	0/1	1/1
+aalba5_s00256540	11964	304501:30:+	G	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	0/1	1/1
+aalba5_s00258014	8734	305110:36:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/0
+aalba5_s00258678	9846	305361:55:-	C	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	0/1	1/1
+aalba5_s00259310	5006	305575:15:-	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	0/1	1/1
+aalba5_s00261079	7449	306236:73:-	G	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/0
+aalba5_s00262590	11714	306811:38:+	A	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/1	1/1	0/1
+aalba5_s00265848	11777	307959:15:-	T	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	1/1	0/1
+aalba5_s00267197	6298	308431:92:+	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	1/1	0/0
+aalba5_s00269705	3575	309401:10:+	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	0/1	1/1
+aalba5_s00278544	1298	312488:9:+	T	C	.	PASS	NS=5;AF=0.400;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00280288	9328	313121:8:+	A	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/1
+aalba5_s00280463	7167	313171:50:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/1	1/1	0/0	0/1
+aalba5_s00281724	8099	313553:11:+	C	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/1
+aalba5_s00282568	2061	313882:72:-	G	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|CHR_START-AALBA5B757472|CHR_START-AALBA5B757472|intergenic_region|CHR_START-AALBA5B757472|||n.2061G>C||||||	GT	0/0	1/1	0/0	1/1	0/1
+aalba5_s00284289	7962	314472:75:+	A	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/1	1/1	0/0
+aalba5_s00286385	11552	315267:28:+	A	G	.	PASS	NS=5;AF=0.300;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00288593	6775	316042:32:+	A	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/1	1/1	0/1
+aalba5_s00289560	1736	316325:68:-	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	0/1
+aalba5_s00292324	2920	317163:89:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/0	0/0
+aalba5_s00304272	441	320730:31:-	C	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	0/0	1/1
+aalba5_s00310757	8769	322597:52:+	A	T	.	PASS	NS=5;AF=0.400;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/1	0/0	0/0	1/1	0/1
+aalba5_s00312829	8533	323144:8:+	G	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/0
+aalba5_s00314534	8683	323665:13:-	G	A	.	PASS	NS=5;AF=0.500;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/1	1/1	0/1	0/1	0/0
+aalba5_s00316071	8662	324110:66:+	A	G	.	PASS	NS=5;AF=0.400;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/1	0/1	0/0
+aalba5_s00325926	6683	326608:70:-	T	C	.	PASS	NS=5;AF=0.300;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	0/0	1/1	0/0	0/0	0/1
+aalba5_s00326131	8085	326670:81:-	G	A	.	PASS	NS=5;AF=0.400;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/0	0/0	0/1
+aalba5_s00326816	8574	326849:40:+	A	G	.	PASS	NS=5;AF=0.500;ANN=G|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/1	0/1
+aalba5_s00328710	9618	327322:8:+	G	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/0	0/0	0/1
+aalba5_s00331730	1557	327999:40:-	T	C	.	PASS	NS=5;AF=0.500;ANN=C|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/1	0/1	0/0	0/1
+aalba5_s00333929	3591	328532:55:+	G	A	.	PASS	NS=5;AF=0.300;ANN=A|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/0	0/0	0/1	1/1
+aalba5_s00334050	7915	328575:81:-	A	T	.	PASS	NS=5;AF=0.300;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	0/0	0/1	0/0	0/0	1/1
+aalba5_s00337369	8082	329317:41:+	C	T	.	PASS	NS=5;AF=0.500;ANN=T|intergenic_region|MODIFIER|||||||||||||	GT	1/1	0/0	0/1	0/0	1/1
