@@ -1,4 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+.Rprofile
 .Ruserdata
+renv.lock
+renv
