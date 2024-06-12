@@ -125,24 +125,3 @@ hceph <- plot_h2(data=hindlabelceph$hi,
               #custom.abline=abline(h=0.5,col="black",lwd=1, lty=2),
               cex=1.5,pch=21,
               cex.lab=1.1,cex.axis=1.1,ylim=c(0,1))
-
-# # Para alba
-# 6:     S0          31M           1_neb             0.87             0.44
-# 17:     S0          21M           1_neb             0.54             0.20
-# 18:   TEST       20.1.P 2_neb_seedlings             0.33             0.10
-# 19:     S0           1M           1_neb             0.23             0.05
-# 20:     S0           9M           1_neb             0.14             0.03
-# 21:   TEST      18.10.P 2_neb_seedlings             0.13             0.02
-# 22:   TEST      22.18.P 2_neb_seedlings             0.13             0.02
-
-
-
-# # Para ceph
-# 1:     S0          31M           1_neb             1.00             0.69 
-# TEST       20.1.P 2_neb_seedlings             0.78             0.37             0.95 0.70699341 0.023669543
-# 18:     S0          21M           1_neb             0.49             0.17             0.82 0.49218511 0.028899046
-# 19:     S0          26M           1_neb             0.47             0.16             0.81 0.47750202 0.029629240
-# # 20:   TEST      22.18.P 2_neb_seedlings             0.42             0.13             0.78 0.44198390 0.029916819
-# 1:   TEST      18.10.P 2_neb_seedlings             0.21             0.04             0.67 0.29837468 0.028032072
-# 22:   TEST      18.13.P 2_neb_seedlings             0.14             0.02             0.68 0.27739999 0.032138874
-# 23:   TEST       21.5.P 2_neb_seedlings             0.13             0.02             0.68 0.27053319 0.031651412

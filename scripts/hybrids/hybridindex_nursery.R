@@ -155,6 +155,7 @@ hceph <- plot_h2(data=hindlabelceph$hi,
 
 
 
+# summary
 
 hindex_seedlingceph<-hindlabelceph$hi[hindlabelceph$hi$POPID=="2_seedlings_nursery",]
 

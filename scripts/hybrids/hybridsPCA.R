@@ -12,9 +12,9 @@ load(here("envs","AGP_results8.11.2023.RData"))
 
 
 
-# PCA especies, adultos y plantulas sospechosas ----
-# subset loci hibridacion
-# Se necesita PadresDB, plantulas_sosDB
+# PCA fir species and  candidate hybrid seedlings ----
+# subset loci hybridization
+
 
 
 vcf_abies <- read.vcfR(here("data","openarray_design","data","R0.3populations_TODOsnps.recode.vcf"), verbose = FALSE )
@@ -24,7 +24,7 @@ abies_genind <- vcfR2genind(vcf_abies, return.alleles=T)
 pop<-c(rep("neb",5), rep("cep",15), rep("alb",15))
 abies_genind@pop<-as.factor(pop)
 indNames(abies_genind)<-substr(indNames(abies_genind),21,32)
-abies_genind<-abies_genind[-c(1:5)] # quitar nebrodensis_old
+abies_genind<-abies_genind[-c(1:5)] # remove nebrodensis_old
 
 introgressmarkers<-read.table(here("data","openarray_design","data","introgressmarkers.txt"), header=F)
 abiesintrogress_genind<-abies_genind[loc=introgressmarkers$V1]
@@ -35,25 +35,8 @@ locNames(abiesintrogress_genind)<-markers[match(locNames(abiesintrogress_genind)
 
 nebrodf3_118introgress_genind<-nebrodf3_118[loc=locNames(abiesintrogress_genind)]
 
-# # Comparar los nombres de alelos
-# all_names_1 <-abiesintrogress_genind@all.names
-# all_names_2 <- nebrodf3_118introgress_genind@all.names
-# comparison <- mapply(function(x, y) identical(x, y), all_names_1, all_names_2)
-# 
-# all_names_1["a00064811_27192"]
-# all_names_2["a00064811_27192"]
-# 
-# test<-repool(abiesintrogress_genind,nebrodf3_118introgress_genind)
-# 
-# nebrodf3_118introgress_genind[loc="a00064811_27192"]@tab[1,]
-# abiesintrogress_genind[loc="a00064811_27192"]@tab[1,]
-# test[loc="a00064811_27192"]@tab[c("01_2019_2121","_cep_39_2_sb"),]
-
-
-
-
 xloci<-intersect(locNames(nebrodf3_118introgress_genind), locNames(abiesintrogress_genind))
-#21 loci
+
 
 
 
@@ -109,8 +92,5 @@ legend(2,-3.5,legend = c(expression(italic("A. alba")),
        box.lwd = 0, border = "white", bg="transparent")
 dev.off()
 
-# legend(11,-15,legend = c("Silver fir", "Greek fir", "Sicilian fir adults", "Sicilian fir seedlings"), 
-#        pch=21, cex=1.2, col="grey35", pt.bg=col1, pt.cex=1.5,
-#        box.lwd = 0, border = "white", bg="transparent")
 
 
