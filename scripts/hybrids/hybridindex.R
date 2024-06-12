@@ -1,124 +1,20 @@
 # Libraries ----
-library(triangulaR)
 library(gghybrid)
 library(coda)
 library(here)
-library(vcfR)
-library(radiator)
 source(here("scripts","hybrids","plot_h2.R"))
+source(here("scripts","Diversity","genind2structure.R"))
 
-load(here("envs","nebrodensis.21.12.2020.RData"))
-
-# Pool Abies species and A. nebrodensis hybrids
-vcf_abies <- read.vcfR("/home/fbalao/Datos/ARTICULO/Abies_nebrodi/openarray_data/hybrids/R0.3populations_TODOsnps.recode.vcf", verbose = FALSE )
-markers<-read.table("Abies_nebrodi/openarray_data/hybrids/markers.recode.txt", header=T)
-
-abies_genind <- vcfR2genind(vcf_abies, return.alleles=T)
-pop<-c(rep("neb",5), rep("cep",15), rep("alb",15))
-abies_genind@pop<-as.factor(pop)
-abiesnames<-read.table("namesabiespecies.txt", sep=",")
-indNames(abies_genind)<-abiesnames[match(indNames(abies_genind), abiesnames$V1), 2]
-locNames(abies_genind)<-markers[match(locNames(abies_genind), markers$ID), "loci"]
-
-abies_genindc<-abies_genind[6:35]
-
-
-#### extraer las plantulas sospechosas de ser hibridas
-
-indNames(plantulasNDB)<-padresnames[match(indNames(plantulasNDB), padresnames$Codigo_muestra), "ID_LIFE"]
-#indNames(padresDB)<-padresnames[match(indNames(padresDB), padresnames$Codigo_muestra), "ID_LIFE"]
-
-plantulas_sospechosas<-c("16.2.P","16.3.P","18.10.P","18.13.P","20.1.P",
-                         "21.3.P","21.4.P","21.5.P","22.18.P")
-
-plantulas_sosDB<-plantulasNDB[plantulas_sospechosas]
-
-
-xloci<-intersect(locNames(padresDB), locNames(abies_genindc))
-
-
-
-abies_genindc_sub<-abies_genindc[loc = xloci]
-padresDB_sub<-padresDB[loc= xloci]
-padresDB_sub@pop<-as.factor(rep("adults",30))
-
-plantulas_sosDB_sun<-plantulas_sosDB[loc= xloci]
-plantulas_sosDB_sun@pop<-as.factor(rep("seedlings",9))
-
-poolabies<-repool(abies_genindc_sub, padresDB_sub,plantulas_sosDB_sun)
-
-hybrid_alba<-poolabies[16:69]
-
-hybrid_ceph<-poolabies[c(1:15,31:69)]
-
-# TriangulaR ----
-
-# Export to vcf - a intermediate step to triangulaR
-
-genomic_converter(
-  data =hybrid_alba, output = "vcf", filename = "hybrid_alba")
-
-genomic_converter(
-  data =hybrid_ceph, output = "vcf", filename = "hybrid_ceph")
-
-
-# Import VCF
-
-vcf_hybrid_alba <- read.vcfR(here("data", "hybrids","hybrid_alba.vcf"), verbose = FALSE )
-vcf_hybrid_alba@fix[,3]<-as.character(1:95)
-
-vcf_hybrid_ceph <- read.vcfR(here("data", "hybrids","hybrid_ceph.vcf"), verbose = FALSE )
-vcf_hybrid_ceph@fix[,3]<-as.character(1:95)
-
-#popmap
-
-popabies<-c(rep("A. nebrodensis", 39 ),rep("A. alba", 15))
-popabies[grep(".P", colnames(vcf_hybrid_alba@gt)[-1])]<-"A. nebrodensis seedlings"
-popabies[33]<-"A. nebrodensis hybrid"
-vcf_hybrid_alba_popmap<-data.frame(id=colnames(vcf_hybrid_alba@gt)[-1], pop=popabies)
-
-
-popceph<-c(rep("A. nebrodensis", 39 ),rep("A. cephalonica", 15))
-popceph[grep(".P", colnames(vcf_hybrid_ceph@gt)[-1])]<-"seedlings"
-popceph[33]<-"A. nebrodensis hybrid"
-
-vcf_hybrid_ceph_popmap<-data.frame(id=colnames(vcf_hybrid_ceph@gt)[-1], pop=popceph)
-
-
-
-# Create a new vcfR object composed only of sites above the given allele frequency difference threshold
-alba.vcfR.diff <- alleleFreqDiff(vcfR = vcf_hybrid_alba,
-                                    pm = vcf_hybrid_alba_popmap,
-                                    p1 = "A. nebrodensis",
-                                    p2 = "A. alba",
-                                    difference = 0.72)
-
-ceph.vcfR.diff <- alleleFreqDiff(vcfR = vcf_hybrid_ceph,
-                                 pm = vcf_hybrid_ceph_popmap,
-                                 p1 = "A. nebrodensis",
-                                 p2 = "A. cephalonica",
-                                 difference = 0.2)
-
-# Calculate hybrid index and heterozygosity for each sample. Values are returned in a data.frame
-hi.het.alb <- hybridIndex(vcfR = alba.vcfR.diff, pm = vcf_hybrid_alba_popmap, p1 = "A. nebrodensis", p2 = "A. alba")
-
-hi.het.ceph <- hybridIndex(vcfR = ceph.vcfR.diff, pm = vcf_hybrid_ceph_popmap, p1 = "A. nebrodensis hybrids", p2 = "A. alba")
-
-
-# Generate colors (or leave blank to use default)
-#cols <- c("#762a83", "#1b7837", "#af8dc3", "#7fbf7b", "#bababa", "#878787")
-cols <- c("#762a83", "#1b7837", "#878787", "#bababa")
-# View triangle plot
-triangulaR::triangle.plot(hi.het.alb, colors = cols, cex=3.5, jitter=0.025)
-
-
-triangulaR::triangle.plot(hi.het.ceph, colors = cols, cex=3.5, jitter=0.025)
-
+#  transform genind to structure format ----
+# poolabies2 is coming from hybridsPCA.R
+genind2structure(poolabies2, file=here("data","hybrids","seedlings_hybrids.str"),
+                 pops=T)
+#modify the structure file: change pop names, remove cephalonica/alba and missiing data code
 
 # gghybrid bayesian hybrid index----
 
 # alba - neb
-dat_seedlings <- read.data(file=here("data","hybrids","seedlings_alba_hybrids.str"),nprecol=2,NUMLOCI=18,NUMINDS=54,MISSINGVAL=NA)
+dat_seedlings <- read.data(file=here("data","hybrids","seedlings_alba_hybrids_new2.str"),nprecol=2,NUMLOCI=21,NUMINDS=54,MISSINGVAL=NA)
 
 
 prepdata<- data.prep(
@@ -126,8 +22,8 @@ prepdata<- data.prep(
   loci=dat_seedlings$loci,               #part of the read.data output object#
   sourceAbsent = FALSE,         #Must be set to TRUE in the absence of parental reference samples. Default is FALSE#
   alleles=dat_seedlings$alleles,         #part of the read.data output object#
-  S0="neb",                                    #first parental reference set; must be specified when sourceAbsent = FALSE#
-  S1="al",                        #character vector identifying parental reference S1 samples. Leave blank in the absence of parental reference samples#
+  S0="1_neb",                                    #first parental reference set; must be specified when sourceAbsent = FALSE#
+  S1="3_alb",                        #character vector identifying parental reference S1 samples. Leave blank in the absence of parental reference samples#
   precols=dat_seedlings$precols,         #part of the read.data output object#
   return.genotype.table=TRUE,  #This returns an table, with loci in columns, of diploid (or other ploidy) genotypes, coded as number of copies of the 
   #allele with higher frequency in S1 than S0#
@@ -147,14 +43,31 @@ hindlabelalba<-esth(
 
 colorshyb<-brewer.pal(5,"Spectral")
 
-layout(matrix(c(1,2),ncol=1))
+
 
 # New Figure 3 
-par(mar=c(4,4.1,1,1))
+layout(matrix(c(1,1,2,3),ncol=2))
+par(mar=c(4,4.1,1,1), pty="m")
+
+# PCA from hybridsPCA.R
+# col1<-c("#FDAE61","#FFFFBF", "#ABDDA4", "#e58f90")
+# plot(x,y, bg=bgcol, pch=21, cex=2, col=circ,
+#      xlab="PC1 (29.6%)", ylab="PC2 (14.1%)", cex.axis=1.3, cex.lab=1.4)
+# 
+# legend(1,-3.5,legend = c(expression(italic("A. alba")),
+#                          expression(italic("A. cephalonica")),
+#                          expression(paste(italic("A. nebrodensis")," adults")),
+#                          expression(paste(italic("A. nebrodensis"), " seedlings"))),
+#        pch=21, cex=1.4, col="grey35", pt.bg=col1, pt.cex=1.6,
+#        box.lwd = 0, border = "white", bg="transparent")
+
+# hybrid index plots 
+par(mar=c(4,7,1,1), pty="m")
+
 bc <- plot_h2(data=hindlabelalba$hi,
              test.subject=hindlabelalba$test.subject,
              mean.h.by="POPID",			                    #Calculate the mean hybrid index for each value of the "POPID" column#
-             sort.by=c("mean_h","POPID","h_posterior_mode"),	#Order test subjects along the x axis by the mean hybrid index calculated above and also by 
+             sort.by=c("POPID","h_posterior_mode"),	#Order test subjects along the x axis by the mean hybrid index calculated above and also by 
              #individual hybrid index ("POPID" is included as some population pairs may have identical mean hi).
              col.group="POPID",
              group.sep=NULL,
@@ -162,7 +75,7 @@ bc <- plot_h2(data=hindlabelalba$hi,
              basic.lines=T,
              labelx="",
              labely=substitute(paste("Hybrid index", italic(" A. alba"))),
-             source.col=colorshyb[c(4,3)],
+             source.col=colorshyb[c(4,2)],
            #  source.limits=c("NA","NA"),
              #custom.abline=abline(h=0.5,col="black",lwd=1, lty=2),
              cex=1.5,pch=21,
@@ -170,7 +83,7 @@ bc <- plot_h2(data=hindlabelalba$hi,
 
 
 # ceph - neb
-dat_ceph <- read.data(file=here("data","hybrids","seedlings_ceph_hybrids.str"),nprecol=2,NUMLOCI=18,NUMINDS=54,MISSINGVAL=NA)
+dat_ceph <- read.data(file=here("data","hybrids","seedlings_ceph_hybrids_new.str"),nprecol=2,NUMLOCI=21,NUMINDS=54,MISSINGVAL=NA)
 
 
 prepdata_ceph<- data.prep(
@@ -178,8 +91,8 @@ prepdata_ceph<- data.prep(
   loci=dat_ceph$loci,               #part of the read.data output object#
   sourceAbsent = FALSE,         #Must be set to TRUE in the absence of parental reference samples. Default is FALSE#
   alleles=dat_ceph$alleles,         #part of the read.data output object#
-  S0="neb",                                    #first parental reference set; must be specified when sourceAbsent = FALSE#
-  S1="ceph",                        #character vector identifying parental reference S1 samples. Leave blank in the absence of parental reference samples#
+  S0="1_neb",                                    #first parental reference set; must be specified when sourceAbsent = FALSE#
+  S1="3_cep",                        #character vector identifying parental reference S1 samples. Leave blank in the absence of parental reference samples#
   precols=dat_ceph$precols,         #part of the read.data output object#
   return.genotype.table=TRUE,  #This returns an table, with loci in columns, of diploid (or other ploidy) genotypes, coded as number of copies of the 
   #allele with higher frequency in S1 than S0#
@@ -200,15 +113,36 @@ hindlabelceph<-esth(
 hceph <- plot_h2(data=hindlabelceph$hi,
               test.subject=hindlabelceph$test.subject,
               mean.h.by="POPID",	#Calculate the mean hybrid index for each value of the "POPID" column#
-              sort.by=c("mean_h","POPID","h_posterior_mode"),	#Order test subjects along the x axis by the mean hybrid index calculated above and also by 
+              sort.by=c("POPID","h_posterior_mode"),	#Order test subjects along the x axis by the mean hybrid index calculated above and also by 
               #individual hybrid index ("POPID" is included as some population pairs may have identical mean hi).
               col.group="POPID",
               group.sep=NULL,
               fill.source=F,
               labely=substitute(paste("Hybrid index", italic(" A. cephalonica"))),
               basic.lines=T,
-              source.col=colorshyb[c(4,2)],
+              source.col=colorshyb[c(4,3)],
               source.limits=c("NA","NA"),
               #custom.abline=abline(h=0.5,col="black",lwd=1, lty=2),
               cex=1.5,pch=21,
               cex.lab=1.1,cex.axis=1.1,ylim=c(0,1))
+
+# # Para alba
+# 6:     S0          31M           1_neb             0.87             0.44
+# 17:     S0          21M           1_neb             0.54             0.20
+# 18:   TEST       20.1.P 2_neb_seedlings             0.33             0.10
+# 19:     S0           1M           1_neb             0.23             0.05
+# 20:     S0           9M           1_neb             0.14             0.03
+# 21:   TEST      18.10.P 2_neb_seedlings             0.13             0.02
+# 22:   TEST      22.18.P 2_neb_seedlings             0.13             0.02
+
+
+
+# # Para ceph
+# 1:     S0          31M           1_neb             1.00             0.69 
+# TEST       20.1.P 2_neb_seedlings             0.78             0.37             0.95 0.70699341 0.023669543
+# 18:     S0          21M           1_neb             0.49             0.17             0.82 0.49218511 0.028899046
+# 19:     S0          26M           1_neb             0.47             0.16             0.81 0.47750202 0.029629240
+# # 20:   TEST      22.18.P 2_neb_seedlings             0.42             0.13             0.78 0.44198390 0.029916819
+# 1:   TEST      18.10.P 2_neb_seedlings             0.21             0.04             0.67 0.29837468 0.028032072
+# 22:   TEST      18.13.P 2_neb_seedlings             0.14             0.02             0.68 0.27739999 0.032138874
+# 23:   TEST       21.5.P 2_neb_seedlings             0.13             0.02             0.68 0.27053319 0.031651412
