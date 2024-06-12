@@ -108,7 +108,7 @@ col1=brewer.pal(5,"Spectral")[c(3,2,4)]
 gl.pcoa.plot(pc_dapc, selectednebrodi_dapc, pop.labels="pop", xaxis=1, yaxis=2,
              pt.color=col1)
 
-# Figure S1 ----
+# Figure S2 ----
 
 x<-pc_dapc$scores[,1]
 y<-pc_dapc$scores[,2]
