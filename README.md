@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/306284198.svg)](https://zenodo.org/doi/10.5281/zenodo.11622036)
+
 ### R Scripts for analyses from manuscript *Genomic-guided conservation actions to restore the most endangered conifer in the Mediterranean Basin*
 Authors: José Carlos del Valle, Montserrat Arista, Carmen Benítez-Benítez, Pedro Luis Ortiz, Francisco J. Jiménez-López, Anass Terrab, Francisco Balao  
 
